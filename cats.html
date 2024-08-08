@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <title>Cats</title>
+      <link rel="stylesheet" href="style.css">
+      <link href='https://fonts.googleapis.com/css?family=Akshar' rel='stylesheet'>
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="assets/cat logo.png" alt="cat logo">
+        </div>
+        <a href="index.html">Home</a>
+        <a href="#">About us</a>
+        <a href="#">Adoptable Cats</a>
+        <a href="#">Locations</a>
+        <a href="#">Careers</a>
+      </nav>
+    </header>
+    <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
+    </select>
+    
+    <div>
+    <a id="wiki_link" target="_blank"></a>
+    <div id="breed_json"></div>
+    </div>
+    
+    <div>
+    <img id="breed_image"></img>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
