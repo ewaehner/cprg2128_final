@@ -19,17 +19,22 @@
         <a href="#">Careers</a>
       </nav>
     </header>
+    <div class="dropdown-container">
     <select onchange="showBreedImage(value)" name="breed_selector" id="breed_selector">
-    </select>
-    
-    <div>
-    <a id="wiki_link" target="_blank"></a>
-    <div id="breed_json"></div>
+</select>
+</div>
+   
+    <div class="image_container"> 
+      <img id="breed_image" alt="cat breed image"></img>
+      <div class="information">
+        <div id="breed_json"></div>
+      <a id="wiki_link" target="_blank"></a>
     </div>
-    
-    <div>
-    <img id="breed_image"></img>
+   
+
+   
     </div>
+  
     <script src="scripts.js"></script>
   </body>
 </html>
