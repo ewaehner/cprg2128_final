@@ -7,7 +7,6 @@ fetch(url, {
     "x-api-key": api_key,
   },
 })
-
   .then((response) => {
     return response.json();
   })
@@ -18,32 +17,26 @@ fetch(url, {
 
     for (let i = 0; i < storedBreeds.length; i++) {
       const breed = storedBreeds[i];
-      let option = document.createElement('option');
-       
-       //skip any breeds that don't have an image
-       if(!breed.image)continue
-       
-      //use the current array index
+      let option = document.createElement("option");
+      if (!breed.image) continue;
       option.value = i;
       option.innerHTML = `${breed.name}`;
-  document.getElementById('breed_selector').appendChild(option);
-       }
-    
-       //show the first breed by default
-     showBreedImage(0)
+      document.getElementById("breed_selector").appendChild(option);
+    }
+
+    showBreedImage(0);
   })
-   
-  .catch(function(error) {
-     console.log(error);
+  .catch(function (error) {
+    console.log(error);
   });
-   
-  function showBreedImage(index)
-  {
-    document.getElementById("breed_image").src= storedBreeds[index].image.url;
-    
-    document.getElementById("breed_json").textContent= storedBreeds[index].temperament
-    
-    document.getElementById("wiki_link").href= storedBreeds[index].wikipedia_url
-   
-    document.getElementById("wiki_link").innerHTML= storedBreeds[index].wikipedia_url
-  }
+
+function showBreedImage(index) {
+  document.getElementById("breed_image").src = storedBreeds[index].image.url;
+
+  document.getElementById("breed_json").textContent =
+    storedBreeds[index].temperament;
+
+  document.getElementById("wiki_link").href = storedBreeds[index].wikipedia_url;
+  document.getElementById("wiki_link").innerHTML =
+    storedBreeds[index].wikipedia_url;
+}
