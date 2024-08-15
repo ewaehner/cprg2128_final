@@ -1,6 +1,5 @@
 const url = `https://api.thecatapi.com/v1/breeds`;
-const api_key =
-  "live_toKCmM3tpOhqSozSqx9jYF6C6OxCN311fzOP4YwHEYgIBiRHkaCeFgQZ70SAh0Ux";
+const api_key = "__API_KEY__/";
 let storedBreeds = [];
 
 fetch(url, {
@@ -14,6 +13,7 @@ fetch(url, {
   .then((data) => {
     data = data.filter((img) => img.image?.url != null);
     storedBreeds = data;
+    console.log(API_KEY)
 
     for (let i = 0; i < storedBreeds.length; i++) {
       const breed = storedBreeds[i];
