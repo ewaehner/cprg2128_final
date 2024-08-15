@@ -10,15 +10,16 @@ body {
 } 
 
 nav a {
-  color: white;
+  color: #ddd1c5;
   text-decoration: none;
+  font-size:larger;
 }
 
 .navbar {
   display: flex; 
   justify-content: space-around;
   align-items: center;
-  background-color: rgb(34, 38, 66);
+  background-color: #222642;
 }
 
 a:hover {
@@ -39,11 +40,13 @@ a:hover {
 
 .hero-banner__content {
   padding: 20px 30px;
-  color: white;
+  color: rgb(255, 255, 255);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
+  font-size: large;
+  
 }
 
 .hero-banner__heading {
@@ -52,8 +55,8 @@ a:hover {
 }
 
 .hero-banner__cta {
-  background-color: #039a63;
-  color: white;
+  background-color: #222642;
+  color: rgb(255, 255, 255);
   border: #039a63;
   outline: #039a63;
   display: inline-block;
@@ -248,10 +251,6 @@ font-size:medium;
 .breed_image {
   width: 100px;
   height: 100px;
-}
-
-.image_content {
-
 }
 
 .information {
