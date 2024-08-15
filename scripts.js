@@ -1,5 +1,5 @@
 const url = `https://api.thecatapi.com/v1/breeds`;
-const api_key = "__API_KEY__/";
+const api_key = "__API_KEY__";
 let storedBreeds = [];
 
 fetch(url, {
