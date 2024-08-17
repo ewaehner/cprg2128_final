@@ -9,7 +9,7 @@ async function fetchCatBreeds() {
     });
     let data = await response.json();
     data = data.filter((breed) => breed.image?.url);
-    console.log("Fetched Breeds:", data); 
+    console.log("Fetched Breeds:", data);
 
     catBreeds = data;
 
@@ -39,14 +39,14 @@ function populateBreedSelector(breeds) {
 
 async function fetchAndShowBreedImages(index) {
   const breedId = catBreeds[index].id;
-  const imageUrl = `https://api.thecatapi.com/v1/images/search?breed_id=${breedId}&limit=3`; // Fetch 3 images for the breed
+  const imageUrl = `https://api.thecatapi.com/v1/images/search?breed_id=${breedId}&limit=3`; 
 
   try {
     const response = await fetch(imageUrl, {
       headers: { "x-api-key": api_key },
     });
     const images = await response.json();
-    console.log("Fetched Images:", images); 
+    console.log("Fetched Images:", images);
 
     displayImages(images);
   } catch (error) {
@@ -62,7 +62,7 @@ function displayImages(images) {
     let imgElement = document.createElement("img");
     imgElement.src = image.url;
     imgElement.alt = "Cat image";
-    imgElement.style.width = "200px"; 
+    imgElement.style.width = "200px";
     imgElement.style.margin = "10px";
     container.appendChild(imgElement);
   });
