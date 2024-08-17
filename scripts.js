@@ -1,6 +1,5 @@
 const url = `https://api.thecatapi.com/v1/breeds`;
 const api_key = "__API_KEY__";
-//const api_key = "live_toKCmM3tpOhqSozSqx9jYF6C6OxCN311fzOP4YwHEYgIBiRHkaCeFgQZ70SAh0Ux";
 let catBreeds = [];
 
 async function fetchCatBreeds() {
